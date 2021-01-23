@@ -1,0 +1,3 @@
+title=BassNotes
+author=Cyril Stoller
+orientation=portrait

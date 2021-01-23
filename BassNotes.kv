@@ -1,0 +1,49 @@
+#:kivy 1.0.9
+#from math import round
+
+<BassNotes>:
+    orientation: 'vertical'
+    Label:
+        id: beat
+        font_size: '120sp'
+        bold: True
+        text: '1'
+    BoxLayout:
+        size_hint_y: 0.2
+        Slider:
+            id: bpm_slider
+            value: 120
+            min: 30
+            max: 180
+            step: 5
+        Label:
+            text: str(int(round(bpm_slider.value)))
+            text_size: self.size
+            font_size: '35sp'
+            size_hint_x: 0.25
+            halign: 'left'
+            valign: 'middle'
+    ToggleButton:
+        text: 'Play Sound'
+        font_size: '30sp'
+        state: 'down'
+        id: sound
+        size_hint_y: 0.2
+
+    Label:
+        id: note
+        font_size: '120sp'
+        text: 'E'
+        bold: True
+    BoxLayout:
+        size_hint_y: 0.2
+        Slider:
+            id: show_slider
+            value: 4.0
+            min: 1.0
+            max: 4.8
+            step: 0.2
+        Label:
+            text: str(round(show_slider.value, 1))
+            font_size: '35sp'
+            size_hint_x: 0.25
